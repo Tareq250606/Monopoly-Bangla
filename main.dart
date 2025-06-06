@@ -1,36 +1,35 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MonopolyBDApp());
+  runApp(MonopolyBDApp());
 }
 
 class MonopolyBDApp extends StatelessWidget {
-  const MonopolyBDApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Monopoly BD',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        fontFamily: 'NotoSerifBengali',
       ),
-      home: const HomePage(),
-      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Monopoly BD')),
-      body: const Center(
+      appBar: AppBar(
+        title: Text('মনোপলি BD'),
+      ),
+      body: Center(
         child: Text(
-          'Welcome to Monopoly BD!',
-          style: TextStyle(fontSize: 24),
+          'এটা হলো বাংলায় তৈরি Monopoly গেম!',
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
